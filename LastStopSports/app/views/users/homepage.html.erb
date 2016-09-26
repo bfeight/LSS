@@ -50,9 +50,9 @@
   <div class="row">
   <% TwitterApi.our_public_tweets.each do |tweets| %>
   		<div class="col-md-4">
-  			<h3><%= TwitterApi.our_public_tweets.first.user.screen_name %></h3>
+  			<h3><%= tweets.user.screen_name %></h3>
   			<p><%= tweets.text %></p>
-        <h6><%= TwitterApi.our_public_tweets.first.created_at %></h6>
+        <h6><%= tweets.created_at %></h6>
   		</div>
   </div>
 </div>
