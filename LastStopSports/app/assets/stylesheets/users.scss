@@ -10,6 +10,7 @@ body {
 	color: #f7f7f7;
 	font-family: 'Montserrat', sans-serif;
 }
+
 h1,
 h2 {
 	font-weight: bold;
@@ -65,4 +66,17 @@ p {
 }
 .navbar-inverse .navbar-nav .dropdown-menu li a:hover {
 	background: #2C463C;
+}
+
+.col-md-4 {
+border: solid;
+width: 300px;
+height: 300px;
+}
+
+.row {
+	text-align: center;
+	margin-left: 10%;
+	margin-right: 10%;
+
 }

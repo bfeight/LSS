@@ -22,9 +22,9 @@
 		</div>
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			<ul class="nav navbar-nav navbar-right">
-				<li><a href="#">About</a></li>
+				<li><a href="#">NBA</a></li>
 				<li class="dropdown">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Services<span class="caret"></span></a>
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Resources<span class="caret"></span></a>
 					<ul class="dropdown-menu">
 						<li><a href="#">Design</a></li>
 						<li><a href="#">Development</a></li>
@@ -47,16 +47,18 @@
 
 
 <div class="container">
-  <div class="row">
-  <% TwitterApi.our_public_tweets.each do |tweets| %>
+  <div class="row" style="display:inline-block">
+  <%  all = TwitterApi.schefter + TwitterApi.matthewberry + TwitterApi.rapoport + TwitterApi.johnclayton + TwitterApi.mort + TwitterApi.nflbnn %>
+  <%  all.each do |tweets| %>
+
   		<div class="col-md-4">
   			<h3><%= tweets.user.screen_name %></h3>
   			<p><%= tweets.text %></p>
         <h6><%= tweets.created_at %></h6>
   		</div>
+      <% end %>
   </div>
 </div>
-<% end %>
 
 
 </body>
