@@ -5,7 +5,7 @@ class TwitterApi
   end
 
   def self.matthewberry
-    client.user_timeline('MatthewBerryTMR', count: 5, exclude_replies: true, include_rts: true)
+    client.user_timeline('MatthewBerryTMR', count: 5, exclude_replies: true, include_rts: false)
   end
 
   def self.rapoport
