@@ -36,12 +36,13 @@
 		</div>
 	</div>
 </nav>
-
-
 <div class="jumbotron">
 	<div class="container">
 		<h1>The Lines of the Games</h1>
-		<p>Are you ready to boilerstrap your cross-compatible buzzword? We're Sassy, flat and semantic, so what are you waiting for?</p>
+    <% @entriesArray.each do |entry| %>
+
+      <p><%= entry.teamnames %></p>
+    <% end %>
 		<br>
 		<p><a class="btn btn-primary btn-lg" href="#" role="button">Download Free Trial »</a> <a class="btn btn-primary btn-lg" href="#" role="button">Learn more »</a></p>
 	</div>

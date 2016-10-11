@@ -24,6 +24,35 @@ class TwitterApi
     client.user_timeline('NFLBNN', count: 5, exclude_replies: true, include_rts: false)
   end
 
+  #NBA
+  def self.marcstein
+    client.user_timeline('ESPNSteinLine', count: 5, exclude_replies: true, include_rts: false)
+  end
+
+  def self.chrishaynes
+    client.user_timeline('ChrisBHaynes', count: 5, exclude_replies: true, include_rts: false)
+  end
+
+  def self.shams
+    client.user_timeline('ShamsCharania', count: 5, exclude_replies: true, include_rts: false)
+  end
+
+  def self.alexkennedy
+    client.user_timeline('AlexKennedyNBA', count: 5, exclude_replies: true, include_rts: false)
+  end
+
+  def self.broussard
+    client.user_timeline('Chris_Broussard', count: 5, exclude_replies: true, include_rts: false)
+  end
+
+  def self.breakingnews
+  client.user_timeline('NBABNN', count: 5, exclude_replies: true, include_rts: false)
+  end
+
+
+
+
+
 
 
 
