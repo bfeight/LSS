@@ -22,7 +22,7 @@
 		</div>
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			<ul class="nav navbar-nav navbar-right">
-				<li><a href="application#scrape_nfl">NFL</a></li>
+				<li><a href="scrape_nba">NBA</a></li>
 				<li class="dropdown">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Resources<span class="caret"></span></a>
 					<ul class="dropdown-menu">
@@ -39,19 +39,18 @@
 <div class="jumbotron">
 	<div class="container">
 		<h1>The Lines of the Games</h1>
-    <% @entriesArray.each do |entry| %>
+    <% @nfl_entriesArray.each do |games| %>
 
-      <p><%= entry.teamnames %></p>
+      <p><%= games.nflteamnames %></p>
     <% end %>
 		<br>
 		<p><a class="btn btn-primary btn-lg" href="#" role="button">Download Free Trial »</a> <a class="btn btn-primary btn-lg" href="#" role="button">Learn more »</a></p>
 	</div>
 </div>
 
-
 <div class="container">
   <div class="row" style="display:inline-block">
-  <%  all = TwitterApi.marcstein + TwitterApi.chrishaynes + TwitterApi.shams + TwitterApi.alexkennedy + TwitterApi.broussard + TwitterApi.breakingnews %>
+  <%  all = TwitterApi.schefter + TwitterApi.matthewberry + TwitterApi.rapoport + TwitterApi.johnclayton + TwitterApi.mort + TwitterApi.nflbnn %>
   <%  all.each do |tweets| %>
 
   		<div class="col-md-4">

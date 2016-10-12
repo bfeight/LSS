@@ -1,7 +1,4 @@
 class PageController < ApplicationController
-  def nfl
-  end
-
-  def about
-  end
+  # Define the Entry object
+  
 end
