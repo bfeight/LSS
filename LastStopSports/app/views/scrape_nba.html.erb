@@ -22,15 +22,14 @@
 		</div>
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			<ul class="nav navbar-nav navbar-right">
-				<li><a href="page/nba">NBA</a></li>
+				<li><a href="scrape_nfl">NFL</a></li>
 				<li class="dropdown">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Resources<span class="caret"></span></a>
 					<ul class="dropdown-menu">
-						<li><a href="http://www.rotoworld.com/sports/nfl/football?ls=roto:nfl:gnav">Rotoworld</a></li>
-            <li><a href="https://dailyfantasynerd.com/optimizer/fanduel/nfl">FantasyNerds</a></li>
-						<li><a href="http://www.espn.com/nfl/">Espn</a></li>
-            <li><a href="www.draftkings.com">DraftKings</a></li>
-
+						<li><a href="http://www.rotoworld.com/sports/nba/basketball">Rotoworld</a></li>
+						<li><a href="https://dailyfantasynerd.com/optimizer/fanduel/nfl">FantasyNerds</a></li>
+						<li><a href="http://www.espn.com/nba/">ESPN</a></li>
+            <li><a href="http://www.draftkings.com">DraftKings</a></li>
 					</ul>
 				</li>
 			</ul>
@@ -40,7 +39,10 @@
 <div class="jumbotron">
 	<div class="container">
 		<h1>The Lines of the Games</h1>
-		<p>Are you ready to boilerstrap your cross-compatible buzzword? We're Sassy, flat and semantic, so what are you waiting for?</p>
+    <% @entriesArray.each do |entry| %>
+
+      <p><%= entry.teamnames %></p>
+    <% end %>
 		<br>
 		<p><a class="btn btn-primary btn-lg" href="#" role="button">Download Free Trial »</a> <a class="btn btn-primary btn-lg" href="#" role="button">Learn more »</a></p>
 	</div>
@@ -49,7 +51,7 @@
 
 <div class="container">
   <div class="row" style="display:inline-block">
-  <%  all = TwitterApi.schefter + TwitterApi.matthewberry + TwitterApi.rapoport + TwitterApi.johnclayton + TwitterApi.mort + TwitterApi.nflbnn %>
+  <%  all = TwitterApi.marcstein + TwitterApi.chrishaynes + TwitterApi.shams + TwitterApi.alexkennedy + TwitterApi.broussard + TwitterApi.breakingnews %>
   <%  all.each do |tweets| %>
 
   		<div class="col-md-4">

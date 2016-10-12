@@ -11,6 +11,9 @@ class UsersController < ApplicationController
   # GET /users/1.json
   def show
   end
+  
+  def nba
+  end
 
   # GET /users/new
   def new
