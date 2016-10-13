@@ -38,13 +38,16 @@
 </nav>
 <div class="jumbotron">
 	<div class="container">
-		<h1>The Lines of the Games</h1>
+		<h1 class="oddslabel">NFL Odds</h1>
     <% @nfl_entriesArray.each do |games| %>
-
-      <p><%= games.nflteamnames %></p>
+      <div class="col-sm-3">
+        <p class="odds">
+          <br class="gameodds"><%= games.nflteamnames %> </br>
+          Line: Hometeam -4<br>
+        Over/Under: 186 </p>
+      </div>
     <% end %>
 		<br>
-		<p><a class="btn btn-primary btn-lg" href="#" role="button">Download Free Trial »</a> <a class="btn btn-primary btn-lg" href="#" role="button">Learn more »</a></p>
 	</div>
 </div>
 
