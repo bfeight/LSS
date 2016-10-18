@@ -21,12 +21,12 @@ p {
 }
 
 .jumbotron {
-	background: #27A967;
+	background: white;
 	color: white;
 	text-align: center;
 }
 .jumbotron p {
-	color: white;
+	color: black;
 	font-size: 26px;
 }
 
@@ -90,4 +90,29 @@ ul li:hover ul {
 ul ul {
 	display: none;
 	position: absolute;
+}
+////
+
+.jumbotron .odds {
+	font-size: 13px;
+	font-family: "Lucida Sans Unicode"
+}
+
+h1.oddslabel {
+	color: black;
+	font-family: "Lucida Sans Unicode";
+
+}
+
+h6.gameodds {
+	text-align: left;
+	font-size: 12px;
+	color: black;
+}
+
+mark.overUnder {
+	background-color: #90EE90;
+}
+mark.gameLine {
+	background-color: #E0FFFF;
 }
