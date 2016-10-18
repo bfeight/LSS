@@ -91,20 +91,28 @@ ul ul {
 	display: none;
 	position: absolute;
 }
+////
 
 .jumbotron .odds {
 	font-size: 13px;
 	font-family: "Lucida Sans Unicode"
 }
-.col-sm-3 {
-background-color: #a9a9a9;
-border: solid;
-border-style: outset;
-border-width: medium;;
-border-color: #f0ffff;
-}
+
 h1.oddslabel {
 	color: black;
 	font-family: "Lucida Sans Unicode";
 
+}
+
+h6.gameodds {
+	text-align: left;
+	font-size: 12px;
+	color: black;
+}
+
+mark.overUnder {
+	background-color: #90EE90;
+}
+mark.gameLine {
+	background-color: #E0FFFF;
 }

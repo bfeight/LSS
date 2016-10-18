@@ -42,4 +42,6 @@ class ApplicationController < ActionController::Base
 
     render template: 'scrape_nfl'
   end
+
+  
 end
