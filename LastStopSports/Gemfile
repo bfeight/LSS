@@ -6,6 +6,7 @@ gem 'rails', '~> 5.0.0'
 gem 'twitter'
 gem 'dotenv-rails'
 gem 'listen'
+gem 'pg'
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets
@@ -31,7 +32,7 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-group :development, :test do
+group :development do
   gem 'sqlite3'
 end
 
