@@ -1,10 +1,9 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
-
+  include TwitterApi
   # Define the Entry object
   class Entry
     def initialize(teamnames)
-      require 'TwitterApi'
       @teamnames = teamnames
     end
     attr_reader :teamnames
@@ -26,7 +25,6 @@ class ApplicationController < ActionController::Base
 #NFL Web Scraping
   class NFLEntry
     def initialize(nflteamnames)
-      require 'TwitterApi'
       @nflteamnames = nflteamnames
     end
     attr_reader :nflteamnames
