@@ -1,4 +1,4 @@
-class TwitterApi < ActiveRecord::Base
+module TwitterApi
 
   def self.schefter
     client.user_timeline('AdamSchefter', count: 5, exclude_replies: true, include_rts: false)

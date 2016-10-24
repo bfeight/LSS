@@ -4,6 +4,7 @@ class ApplicationController < ActionController::Base
   # Define the Entry object
   class Entry
     def initialize(teamnames)
+      require 'TwitterApi'
       @teamnames = teamnames
     end
     attr_reader :teamnames
@@ -25,6 +26,7 @@ class ApplicationController < ActionController::Base
 #NFL Web Scraping
   class NFLEntry
     def initialize(nflteamnames)
+      require 'TwitterApi'
       @nflteamnames = nflteamnames
     end
     attr_reader :nflteamnames
@@ -43,5 +45,5 @@ class ApplicationController < ActionController::Base
     render template: 'scrape_nfl'
   end
 
-  
+
 end
