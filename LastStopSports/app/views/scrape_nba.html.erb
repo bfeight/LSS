@@ -40,7 +40,7 @@
 	<div class="container">
 		<h1 class="oddslabel">NBA News and Matchups</h1>
     <% @entriesArray.each do |entry| %>
-      <h6 class="gameodds"><%= entry.teamnames %> | <mark class="gameLine">Line: NA</mark> |   <mark class="overUnder">Over/Under: NA</mark></h6>
+      <h6 class="gameodds"><%= entry.teamnames %> | <mark class="gameLine"><%= entry.lines %></mark></h6>
     <% end %>
 		<br>
 	</div>

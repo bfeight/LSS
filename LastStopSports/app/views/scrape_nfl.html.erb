@@ -41,7 +41,7 @@
 		<h1 class="oddslabel">NFL News and Matchups </h1>
     <% @nfl_entriesArray.each do |games| %>
 
-    <h6 class="gameodds"><%= games.nflteamnames %> | <mark class="gameLine">Line: NA</mark> |   <mark class="overUnder">Over/Under: NA</mark> </h6>
+    <h6 class="gameodds"><%= games.nflteamnames %> | <mark class="gameLine"><%= games.lines %> </mark>  </h6>
     <% end %>
 
 	</div>

@@ -3,10 +3,12 @@ class ApplicationController < ActionController::Base
   include TwitterApi
   # Define the Entry object
   class Entry
-    def initialize(teamnames)
+    def initialize(teamnames, lines)
       @teamnames = teamnames
+      @lines = lines
     end
     attr_reader :teamnames
+    attr_reader :lines
   end
 
   def scrape_nba
@@ -15,8 +17,9 @@ class ApplicationController < ActionController::Base
     entries = doc.css("div.cmg_matchup_game_box")
     @entriesArray = []
     entries.each do |entry|
+    lines = entry.at_css("div.cmg_team_live_odds").text
     teamnames = entry.at_css(".cmg_matchup_header_team_names").text
-    @entriesArray << Entry.new(teamnames)
+    @entriesArray << Entry.new(teamnames, lines)
     end
 
     render template: 'scrape_nba'
@@ -24,10 +27,12 @@ class ApplicationController < ActionController::Base
 
 #NFL Web Scraping
   class NFLEntry
-    def initialize(nflteamnames)
+    def initialize(nflteamnames, lines)
       @nflteamnames = nflteamnames
+      @lines = lines
     end
     attr_reader :nflteamnames
+    attr_reader :lines
   end
 
   def scrape_nfl
@@ -37,7 +42,8 @@ class ApplicationController < ActionController::Base
     @nfl_entriesArray = []
     entries.each do |entry|
     nflteamnames = entry.at_css(".cmg_matchup_header_team_names").text
-    @nfl_entriesArray << NFLEntry.new(nflteamnames)
+    lines = entry.at_css("div.cmg_team_live_odds").text
+    @nfl_entriesArray << NFLEntry.new(nflteamnames, lines)
     end
 
     render template: 'scrape_nfl'
